@@ -4,10 +4,8 @@ services:
   image: mysql:latest
   restart: always
   container_name: Full_2020_086300
-  volumes:
-   - db_data:/var/lib/mysql
   ports:
-   - "3306:3306"
+   - 3306:3306
   networks:
    BridgeZadanie1:
     ipv4_address: 10.0.10.3
@@ -18,17 +16,16 @@ services:
       MYSQL_PASSWORD: "admin"
  java:
   image: verdoux/docker:latest
-  stdin_open: true
   container_name: AJaczynskiJava
   depends_on:
    - mysql
   networks:
    - BridgeZadanie1
+  stdin_open: true
+  tty: true
 networks:
  BridgeZadanie1:
   driver: bridge
   ipam:
    config:
     - subnet: 10.0.10.0/24
-volumes:
- db_data: {}
