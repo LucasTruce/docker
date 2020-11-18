@@ -48,7 +48,7 @@ public class App {
     }
  
     private static void deleteStudentById(Statement stmt) throws SQLException {
-        ResultSet rsss = stmt.executeQuery(SELECT_ALL_FROM_CARS);
+        ResultSet rsss = stmt.executeQuery(SELECT_ALL_FROM_STUDENTS);
         printOutHeader();
         printOutResult(rsss);
         rsss.close();
@@ -98,7 +98,7 @@ public class App {
         System.out.println("Email:");
         final String email = in.nextLine();
  
-        String sql = " INSERT INTO Students (ID, NAME, LASTNAME, EMAIL) VALUES ('"+id+"', '"+model+"', '"+brand+"', '"+productionYear+"')";
+        String sql = " INSERT INTO Students (ID, NAME, LASTNAME, EMAIL) VALUES ('"+id+"', '"+name+"', '"+lastname+"', '"+email+"')";
         stmt.executeUpdate(sql);
     }
  
