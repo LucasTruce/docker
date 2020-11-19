@@ -6,8 +6,8 @@ public class App {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://Full_2020_086300:3306/AJaczynski";
  
-    static final String USER = "root";
-    static final String PASS = "root";
+    static final String USER = "AJaczynski";
+    static final String PASS = "AJaczynski";
  
     static Scanner in = new Scanner( System.in);
     private static final String CREATE_TABLE_STUDENTS = "CREATE TABLE IF NOT EXISTS Students (ID int, NAME varchar(255), LASTNAME varchar(255), EMAIL varchar(255) );";
