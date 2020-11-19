@@ -10,10 +10,10 @@ services:
    BridgeZadanie1:
     ipv4_address: 10.0.10.3
   environment:
-      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "AJaczynski"
       MYSQL_DATABASE: "AJaczynski"
-      MYSQL_USER: "admin"
-      MYSQL_PASSWORD: "admin"
+      MYSQL_USER: "AJaczynski"
+      MYSQL_PASSWORD: "AJaczynski"
  java:
   image: verdoux/docker:latest
   container_name: AJaczynskiJava
